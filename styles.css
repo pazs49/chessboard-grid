@@ -11,8 +11,12 @@ body {
   align-items: center;
   height: 100vh;
 
-  background-color: rgb(121, 121, 121);
+  background-color: #e5e9a3;
   overflow: hidden;
+}
+
+h1 {
+  color: #1e185f;
 }
 
 span {
@@ -27,7 +31,7 @@ span {
   width: 600px;
   height: 600px;
 
-  background-color: rgb(189, 54, 54);
+  background-color: #5d704f;
 }
 
 .cell {
@@ -44,16 +48,16 @@ span {
 .cell:nth-child(16n + 11),
 .cell:nth-child(16n + 13),
 .cell:nth-child(16n + 15) {
-  background-color: black;
+  background-color: #afb981;
 }
 
 /*  */
 .white-piece {
-  color: rgb(255, 255, 255);
+  color: #1e185f;
 }
 
 .black-piece {
-  color: rgb(255, 255, 255);
+  color: #1e185f;
 }
 
 /* Animation */
