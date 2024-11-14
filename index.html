@@ -12,32 +12,23 @@
     <main>
         <h1>Chessboard with Grid</h1>
         <div class="container">
-            <div class="cell"><span class="white-piece">&#9814</span></div>
-            <div class="cell"><span class="white-piece">&#9815</span></div>
-            <div class="cell"><span class="white-piece">&#9816</span></div>
-            <div class="cell"><span class="white-piece">&#9813</span></div>
-            <div class="cell"><span class="white-piece disappear">&#9812</span></div>
-            <div class="cell"><span class="white-piece">&#9816</span></div>
-            <div class="cell"><span class="white-piece">&#9815</span></div>
-            <div class="cell"><span class="white-piece">&#9814</span></div>
+            <div class="cell"><span class="white-piece rook">&#9814</span></div>
+            <div class="cell"><span class="white-piece bishop">&#9815</span></div>
+            <div class="cell"><span class="white-piece knight">&#9816</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9813</span></div>
+            <div class="cell"><span class="white-piece disappear king">&#9812</span></div>
+            <div class="cell"><span class="white-piece knight">&#9816</span></div>
+            <div class="cell"><span class="white-piece bishop-right">&#9815</span></div>
+            <div class="cell"><span class="white-piece rook">&#9814</span></div>
 
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-            <div class="cell"><span class="white-piece disappear">&#9817</span></div>
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-            <div class="cell"><span class="white-piece">&#9817</span></div>
-
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
+            <div class="cell"><span class="white-piece disappear pawn white-pawn-special">&#9817</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
+            <div class="cell"><span class="white-piece pawn">&#9817</span></div>
 
             <div class="cell"></div>
             <div class="cell"></div>
@@ -66,25 +57,119 @@
             <div class="cell"></div>
             <div class="cell"></div>
 
-            <div class="cell"><span class="black-piece pawn-1">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-1">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-1">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-1">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-1">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-2">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-2">&#9823</span></div>
-            <div class="cell"><span class="black-piece pawn-2">&#9823</span></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
 
-            <div class="cell"><span class="black-piece">&#9820</span></div>
-            <div class="cell"><span class="black-piece">&#9821</span></div>
-            <div class="cell"><span class="black-piece">&#9822</span></div>
-            <div class="cell"><span class="black-piece">&#9818</span></div>
-            <div class="cell"><span class="black-piece black-king">&#9819</span></div>
-            <div class="cell"><span class="black-piece">&#9822</span></div>
-            <div class="cell"><span class="black-piece">&#9821</span></div>
-            <div class="cell"><span class="black-piece">&#9820</span></div>
+            <div class="cell"><span class="black-piece pawn-1 pawn">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-1 pawn">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-1 pawn">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-1 pawn">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-1 pawn black-pawn-special">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-2 pawn">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-2 pawn">&#9823</span></div>
+            <div class="cell"><span class="black-piece pawn-2 pawn">&#9823</span></div>
+
+            <div class="cell"><span class="black-piece rook">&#9820</span></div>
+            <div class="cell"><span class="black-piece bishop-right">&#9821</span></div>
+            <div class="cell"><span class="black-piece knight">&#9822</span></div>
+            <div class="cell"><span class="black-piece pawn">&#9818</span></div>
+            <div class="cell"><span class="black-piece black-king king">&#9819</span></div>
+            <div class="cell"><span class="black-piece knight">&#9822</span></div>
+            <div class="cell"><span class="black-piece bishop">&#9821</span></div>
+            <div class="cell"><span class="black-piece rook">&#9820</span></div>
         </div>
     </main>
 </body>
+<script>
+    function addAnimation(event) {
+        const element = event.target;
+
+        const piece = Array.from(element.classList).find(cls => ['king', 'pawn', 'rook', 'bishop', 'bishop-right', 'knight'].includes(cls));
+        let duration = 2300;
+        let color = element.classList.toString().includes('white') ? 'white' : 'black';
+        // console.log(color);
+
+        // if (element.classList.contains('white-piece')) {
+        switch (piece) {
+            case "king":
+                element.classList.add(`king-${color}-move`);
+                document.getElementsByClassName(`${color}-pawn-special`)[0].classList.add('disappear-fast');
+                break;
+            case "pawn":
+                element.classList.add(`pawn-${color}-move`);
+                break;
+            case "rook":
+                element.classList.add(`pawn-${color}-move`);
+                break;
+            case "bishop":
+                element.classList.add(`bishop-${color}-move`);
+                break;
+            case "bishop-right":
+                element.classList.add(`bishop-right-${color}-move`);
+                break;
+            case "knight":
+                element.classList.add(`knight-${color}-move`);
+                break;
+        }
+        // }
+        // else if (element.classList.contains('black-piece')) {
+        //     switch (piece) {
+        //         case "king":
+        //             element.classList.add('king-black-move');
+        //             document.getElementsByClassName('black-pawn-special')[0].classList.add('disappear-fast');
+        //             break;
+        //         case "pawn":
+        //             element.classList.add('pawn-black-move');
+        //             break;
+        //         case "rook":
+        //             element.classList.add('pawn-black-move');
+        //             break;
+        //         case "bishop":
+        //             element.classList.add('bishop-black-move');
+        //             break;
+        //         case "bishop-right":
+        //             element.classList.add('bishop-right-black-move');
+        //             break;
+        //         case "knight":
+        //             element.classList.add('knight-black-move');
+        //             break;
+        //     }
+        // }
+
+        setTimeout(() => {
+            element.classList.remove('king-white-move');
+            element.classList.remove('king-black-move');
+            element.classList.remove('pawn-white-move');
+            element.classList.remove('pawn-black-move');
+            element.classList.remove('bishop-white-move');
+            element.classList.remove('bishop-right-white-move');
+            element.classList.remove('bishop-right-black-move');
+            element.classList.remove('bishop-black-move');
+            element.classList.remove('knight-white-move');
+            element.classList.remove('knight-black-move');
+
+            document.querySelectorAll('.disappear-fast').forEach(piece => piece.classList.remove('disappear-fast'));
+
+            // Default intro animations
+            element.classList.remove('pawn-1')
+            element.classList.remove('pawn-2')
+            element.classList.remove('black-king')
+            element.classList.remove('disappear')
+        }, duration);
+
+    }
+
+    document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', addAnimation));
+
+    setTimeout(() => {
+        document.querySelectorAll('span').forEach(piece => piece.classList.remove('disappear', 'pawn-1'));
+    }, 4300);
+</script>
 
 </html>

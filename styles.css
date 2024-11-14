@@ -22,6 +22,8 @@ h1 {
 span {
   position: absolute;
   font-size: 3vw;
+
+  cursor: pointer;
 }
 
 .container {
@@ -88,6 +90,20 @@ h1 {
   }
 }
 
+.disappear-fast {
+  animation: disappear-fast 2.5s linear 0s normal none;
+}
+@keyframes disappear-fast {
+  0% {
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .black-king {
   animation: black-king 3s linear 1s normal none;
 }
@@ -129,5 +145,158 @@ h1 {
     transform: translate(500%, 0);
   }
   100% {
+  }
+}
+
+/*  */
+.king-white-move {
+  animation: king-white-move 2s linear 0.3s normal none;
+}
+
+@keyframes king-white-move {
+  0% {
+  }
+  10% {
+    transform: translate(0, 90%);
+  }
+  100% {
+    transform: translate(0, 90%);
+  }
+}
+
+.pawn-white-move {
+  animation: pawn-white-move 2s linear 0.3s normal none;
+}
+
+@keyframes pawn-white-move {
+  0% {
+  }
+  10% {
+    transform: translate(0, 190%);
+  }
+  100% {
+    transform: translate(0, 190%);
+  }
+}
+
+.bishop-white-move {
+  animation: bishop-white-move 2s linear 0.3s normal none;
+}
+
+@keyframes bishop-white-move {
+  0% {
+  }
+  10% {
+    transform: translate(390%, 290%);
+  }
+  100% {
+    transform: translate(390%, 290%);
+  }
+}
+
+.bishop-right-white-move {
+  animation: bishop-right-white-move 2s linear 0.3s normal none;
+}
+
+@keyframes bishop-right-white-move {
+  0% {
+  }
+  10% {
+    transform: translate(-390%, 290%);
+  }
+  100% {
+    transform: translate(-390%, 290%);
+  }
+}
+
+.knight-white-move {
+  animation: knight-white-move 2s linear 0.3s normal none;
+}
+
+@keyframes knight-white-move {
+  0% {
+  }
+  10% {
+    transform: translate(130%, 190%);
+  }
+  100% {
+    transform: translate(130%, 190%);
+  }
+}
+
+/*  */
+/*  */
+.king-black-move {
+  animation: king-black-move 2s linear 0.3s normal none;
+}
+
+@keyframes king-black-move {
+  0% {
+  }
+  10% {
+    transform: translate(0, -90%);
+  }
+  100% {
+    transform: translate(0, -90%);
+  }
+}
+
+.pawn-black-move {
+  animation: pawn-black-move 2s linear 0.3s normal none;
+}
+
+@keyframes pawn-black-move {
+  0% {
+  }
+  10% {
+    transform: translate(0, -190%);
+  }
+  100% {
+    transform: translate(0, -190%);
+  }
+}
+
+.bishop-right-black-move {
+  animation: bishop-right-black-move 2s linear 0.3s normal none;
+}
+
+@keyframes bishop-right-black-move {
+  0% {
+  }
+  10% {
+    transform: translate(390%, -290%);
+  }
+  100% {
+    transform: translate(390%, -290%);
+  }
+}
+
+.bishop-black-move {
+  animation: bishop-black-move 2s linear 0.3s normal none;
+}
+
+@keyframes bishop-black-move {
+  0% {
+  }
+  10% {
+    transform: translate(-390%, -290%);
+  }
+  100% {
+    transform: translate(-390%, -290%);
+  }
+}
+
+.knight-black-move {
+  animation: knight-black-move 2s linear 0.3s normal none;
+}
+
+@keyframes knight-black-move {
+  0% {
+  }
+  10% {
+    transform: translate(-130%, -190%);
+  }
+  100% {
+    transform: translate(-130%, -190%);
   }
 }
